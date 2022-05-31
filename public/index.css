@@ -29,21 +29,19 @@ header {
     background-color: #000;
 }
 
-.nav__links a {
+.nav_ref{
     text-decoration: none;
-}
-  
-.nav__links li {
-    padding: 0px 35px;
-}
-  
-.nav__links li a {
     transition: color 0.2s ease 0s;
 }
-  
-.nav__links li a:hover {
+
+.nav_ref:hover{
     color: #f59b23;
 }
+
+.nav-item{
+    padding: 0px 35px;
+}
+
 
 .second_navbar{
     width:100%;
@@ -74,11 +72,11 @@ header {
     background-color: #222326;
 }
 
-.right_piece ul li{
+.second_nav_item{
     padding: 0px 30px;
 }
 
-.right_piece ul li a{
+.second_nav_ref{
     font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
@@ -97,19 +95,19 @@ header {
     flex: 0 0 230px;
 }
 
-.sidebar p{
+.sidebar_text{
     margin-top: 50px;
 }
 
-.sidebar ul{
+.sidebar_links{
     margin-top: 25px;
 }
 
-.sidebar li{
+.sidebar_item{
     padding: 5px 0px;
 }
 
-.sidebar ul a{
+.sidebar_ref{
     text-decoration: none;
     font-size: 14px;
     color: #000;
@@ -149,9 +147,6 @@ header {
     font-weight: bold;
     font-size: 36px;
     margin-top: 25px;
-}
-
-.request span{
     padding-bottom: 15px;
 }
 
@@ -161,7 +156,7 @@ header {
     letter-spacing: 1px;
 }
 
-.title span{
+#blue {
     color:cornflowerblue;
 }
 
@@ -174,17 +169,20 @@ header {
     padding-top: 10px;
 }
 
-.text_title span{
+span{
     font-weight: bold;
 }
 
-.main_text p{
+.main_text{
+    padding-top: 10px
+}
+#main_text {
     font-size: 12px;
     padding-bottom: 10px;
     padding-top: 10px;
 }
 
-.example p{
+.example {
     font-size: 12px;
     padding-top: 20px;
 }
@@ -199,9 +197,7 @@ header {
     font-weight: 200;
     font-size: 12px;
     background: rgb(246, 246, 246);
-}
-
-.code div{
     padding: 15px;
 }
+
 /*# sourceMappingURL=main.css.map */

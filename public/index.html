@@ -15,12 +15,12 @@
   <body>
     <header class ="flex">
       <nav>
-        <ul class="nav__links font-montserrat flex">
-          <li class="nav-item"><a href="#" class="white">DISCOVER</a></li>
-          <li class="nav-item"><a href="#" class="white">DOCS</a></li>
-          <li class="nav-item"><a href="#" class="white">CONSOLE</a></li>
-          <li class="nav-item"><a href="#" class="white">COMMUNITY</a></li>
-          <li class="nav-item"><a href="#" class="white">DASHBOARD</a></li>
+        <ul class="nav_links font-montserrat flex">
+          <li class="nav-item"><a href="#" class="white nav_ref">DISCOVER</a></li>
+          <li class="nav-item"><a href="#" class="white nav_ref">DOCS</a></li>
+          <li class="nav-item"><a href="#" class="white nav_ref">CONSOLE</a></li>
+          <li class="nav-item"><a href="#" class="white nav_ref">COMMUNITY</a></li>
+          <li class="nav-item"><a href="#" class="white nav_ref">DASHBOARD</a></li>
         </ul>
       </nav>
     </header>
@@ -29,30 +29,30 @@
       <a href="#" class ="left_piece font-montserrat white">WEB API</a>
       <div class="right_piece font-montserrat flex">
         <ul class="second_nav_links flex">
-          <li class="second_nav_item"><a href="#" class="white">QUICK START</a></li>
-          <li class="second_nav_item"><a href="#" class="white">GUIDES</a></li>
-          <li class="second_nav_item"><a href="#" class="white">LIBRARIES</a></li>
-          <li class="second_nav_item"><a href="#" class="white">REFERENCE</a></li>
+          <li class="second_nav_item"><a href="#" class="white second_nav_ref">QUICK START</a></li>
+          <li class="second_nav_item"><a href="#" class="white second_nav_ref">GUIDES</a></li>
+          <li class="second_nav_item"><a href="#" class="white second_nav_ref">LIBRARIES</a></li>
+          <li class="second_nav_item"><a href="#" class="white second_nav_ref">REFERENCE</a></li>
         </ul>
       </div>
     </div>
 
     <div class="main_content flex">
       <div class="sidebar font-montserrat">
-        <p>ENDPOINTS</p>
+        <p class="sidebar_text">ENDPOINTS</p>
         <ul class="sidebar_links ">
-          <li class="sidebar_item"><a href="#">Albums</a></li>
-          <li class="sidebar_item"><a href="#">Artists</a></li>
-          <li class="sidebar_item"><a href="#">Shows</a></li>
-          <li class="sidebar_item"><a href="#">Episodes</a></li>
-          <li class="sidebar_item"><a href="#">Tracks</a></li>
-          <li class="sidebar_item"><a href="#">Search</a></li>
-          <li class="sidebar_item"><a href="#">User</a></li>
-          <li class="sidebar_item"><a href="#">Playlists</a></li>
-          <li class="sidebar_item"><a href="#">Categories</a></li>
-          <li class="sidebar_item"><a href="#">Genres</a></li>
-          <li class="sidebar_item"><a href="#">Player</a></li>
-          <li class="sidebar_item"><a href="#">Markets</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Albums</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Artists</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Shows</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Episodes</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Tracks</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Search</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">User</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Playlists</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Categories</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Genres</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Player</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Markets</a></li>
         </ul>
       </div>
       <div class="page">
@@ -65,10 +65,10 @@
               </p>
             </div>
             <div class="request font-montserrat flex">
-              <span>Request</span>
+              <p>Request</p>
             </div>
             <div class="title">
-              <span>GET</span> /search
+              <span id="blue">GET</span> /search
             </div>
             <div class="container">
               <div class="title">
@@ -79,16 +79,16 @@
                   <span>q </span> string
                 </div>
                 <div class="main_text">
-                  <p>Your search query.</p>
-                  <p>You can narrow down your search using field filters. The available filters are album, artist, track, year, upc, tag:hipster, tag:new, isrc, and genre. Each field filter only applies to certain result types.</p>
-                  <p>The artist filter can be used while searching albums, artists or tracks.
+                  <p id="main_text">Your search query.</p>
+                  <p id="main_text">You can narrow down your search using field filters. The available filters are album, artist, track, year, upc, tag:hipster, tag:new, isrc, and genre. Each field filter only applies to certain result types.</p>
+                  <p id="main_text">The artist filter can be used while searching albums, artists or tracks.
                     The album and year filters can be used while searching albums or tracks. You can filter on a single year or a range (e.g. 1955-1960).
                     The genre filter can be use while searching tracks and artists.
                     The isrc and track filters can be used while searching tracks.
                     The upc, tag:new and tag:hipster filters can only be used while searching albums. The tag:new filter will return albums released in the past two weeks and tag:hipster can be used to return only albums with the lowest 10% popularity.</p>
                 </div>
                 <div class="example">
-                  <p>Example value:
+                  <p >Example value:
                     "remaster%20track:Doxy+artist:Miles%20Davis"</p>
                 </div>
                 <div class="underline"></div>
@@ -102,12 +102,10 @@
               </p>
             </div>
             <div class="code font-montserrat">
-              <div>
                 <p>curl --request GET \</p>
                 <p>--url 'https://api.spotify.com/v1/search?type=album&include_external=audio' \</p>
                 <p>--header 'Authorization: ' \</p>
                 <p>--header 'Content-Type: application/json'</p>
-              </div>
             </div>
           </div>
         </div>
