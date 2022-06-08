@@ -4,23 +4,113 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="index.css" rel="stylesheet" type="text/css"/>
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>React App</title>
   </head>
   <body>
+    <header class ="flex header">
+      <nav>
+        <ul class="nav_links font-montserrat flex ul_primary">
+          <li class="nav-item"><a href="#" class="white nav_ref">DISCOVER</a></li>
+          <li class="nav-item"><a href="#" class="white nav_ref">DOCS</a></li>
+          <li class="nav-item"><a href="#" class="white nav_ref">CONSOLE</a></li>
+          <li class="nav-item"><a href="#" class="white nav_ref">COMMUNITY</a></li>
+          <li class="nav-item"><a href="#" class="white nav_ref">DASHBOARD</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="second_navbar flex">
+      <a href="#" class ="left_piece font-montserrat white">WEB API</a>
+      <div class="right_piece font-montserrat flex">
+        <ul class="second_nav_links flex ul_primary">
+          <li class="second_nav_item"><a href="#" class="white second_nav_ref">QUICK START</a></li>
+          <li class="second_nav_item"><a href="#" class="white second_nav_ref">GUIDES</a></li>
+          <li class="second_nav_item"><a href="#" class="white second_nav_ref">LIBRARIES</a></li>
+          <li class="second_nav_item"><a href="#" class="white second_nav_ref">REFERENCE</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main_content flex">
+      <div class="sidebar font-montserrat">
+        <p class="sidebar_text">ENDPOINTS</p>
+        <ul class="sidebar_links ul_primary">
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Albums</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Artists</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Shows</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Episodes</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Tracks</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Search</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">User</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Playlists</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Categories</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Genres</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Player</a></li>
+          <li class="sidebar_item"><a class="sidebar_ref" href="#">Markets</a></li>
+        </ul>
+      </div>
+      <div class="page">
+        <h1 class ="main_header font-montserrat">Search for Item</h1>
+        <div class="content flex">
+          <div class="left_content font-montserrat">
+            <div class="subscription">
+              <p>
+                Get Spotify catalog information about albums, artists, playlists, tracks, shows or episodes that match a keyword string.
+              </p>
+            </div>
+            <div class="request font-montserrat flex">
+              <p>Request</p>
+            </div>
+            <div class="title">
+              <span id="blue" class="span_primary">GET</span> /search
+            </div>
+            <div class="container">
+              <div class="title">
+                Query
+              </div>
+              <div class="text font-montserrat flex">
+                <div class="text_title">
+                  <span class="span_primary">q </span> string
+                </div>
+                <div class="main_text">
+                  <p class="text_content">our search query.</p>
+                  <p class="text_content">You can narrow down your search using field filters. The available filters are album, artist, track, year, upc, tag:hipster, tag:new, isrc, and genre. Each field filter only applies to certain result types.</p>
+                  <p class="text_content">The artist filter can be used while searching albums, artists or tracks.
+                    The album and year filters can be used while searching albums or tracks. You can filter on a single year or a range (e.g. 1955-1960).
+                    The genre filter can be use while searching tracks and artists.
+                    The isrc and track filters can be used while searching tracks.
+                    The upc, tag:new and tag:hipster filters can only be used while searching albums. The tag:new filter will return albums released in the past two weeks and tag:hipster can be used to return only albums with the lowest 10% popularity.</p>
+                </div>
+                <div class="example">
+                  <p >Example value:
+                    "remaster%20track:Doxy+artist:Miles%20Davis"</p>
+                </div>
+                <div class="underline"></div>
+              </div>
+            </div>
+          </div>
+          <div class="right_content font-montserrat">
+            <div class="right_header">
+              <p>
+                Request Sample: Shell / cURL
+              </p>
+            </div>
+            <div class="code font-montserrat">
+                <p>curl --request GET \</p>
+                <p>--url 'https://api.spotify.com/v1/search?type=album&include_external=audio' \</p>
+                <p>--header 'Authorization: ' \</p>
+                <p>--header 'Content-Type: application/json'</p>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
