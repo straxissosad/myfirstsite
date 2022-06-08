@@ -13,9 +13,9 @@
     <title>React App</title>
   </head>
   <body>
-    <header class ="flex">
+    <header class ="flex header">
       <nav>
-        <ul class="nav_links font-montserrat flex">
+        <ul class="nav_links font-montserrat flex ul_primary">
           <li class="nav-item"><a href="#" class="white nav_ref">DISCOVER</a></li>
           <li class="nav-item"><a href="#" class="white nav_ref">DOCS</a></li>
           <li class="nav-item"><a href="#" class="white nav_ref">CONSOLE</a></li>
@@ -28,7 +28,7 @@
     <div class="second_navbar flex">
       <a href="#" class ="left_piece font-montserrat white">WEB API</a>
       <div class="right_piece font-montserrat flex">
-        <ul class="second_nav_links flex">
+        <ul class="second_nav_links flex ul_primary">
           <li class="second_nav_item"><a href="#" class="white second_nav_ref">QUICK START</a></li>
           <li class="second_nav_item"><a href="#" class="white second_nav_ref">GUIDES</a></li>
           <li class="second_nav_item"><a href="#" class="white second_nav_ref">LIBRARIES</a></li>
@@ -40,7 +40,7 @@
     <div class="main_content flex">
       <div class="sidebar font-montserrat">
         <p class="sidebar_text">ENDPOINTS</p>
-        <ul class="sidebar_links ">
+        <ul class="sidebar_links ul_primary">
           <li class="sidebar_item"><a class="sidebar_ref" href="#">Albums</a></li>
           <li class="sidebar_item"><a class="sidebar_ref" href="#">Artists</a></li>
           <li class="sidebar_item"><a class="sidebar_ref" href="#">Shows</a></li>
@@ -68,7 +68,7 @@
               <p>Request</p>
             </div>
             <div class="title">
-              <span id="blue">GET</span> /search
+              <span id="blue" class="span_primary">GET</span> /search
             </div>
             <div class="container">
               <div class="title">
@@ -76,12 +76,12 @@
               </div>
               <div class="text font-montserrat flex">
                 <div class="text_title">
-                  <span>q </span> string
+                  <span class="span_primary">q </span> string
                 </div>
                 <div class="main_text">
-                  <p id="main_text">Your search query.</p>
-                  <p id="main_text">You can narrow down your search using field filters. The available filters are album, artist, track, year, upc, tag:hipster, tag:new, isrc, and genre. Each field filter only applies to certain result types.</p>
-                  <p id="main_text">The artist filter can be used while searching albums, artists or tracks.
+                  <p class="text_content">our search query.</p>
+                  <p class="text_content">You can narrow down your search using field filters. The available filters are album, artist, track, year, upc, tag:hipster, tag:new, isrc, and genre. Each field filter only applies to certain result types.</p>
+                  <p class="text_content">The artist filter can be used while searching albums, artists or tracks.
                     The album and year filters can be used while searching albums or tracks. You can filter on a single year or a range (e.g. 1955-1960).
                     The genre filter can be use while searching tracks and artists.
                     The isrc and track filters can be used while searching tracks.

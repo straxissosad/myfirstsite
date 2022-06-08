@@ -18,11 +18,11 @@
     color:white;
 }
 
-ul {
+.ul_primary {
     list-style: none;
 }
 
-header {
+.header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 260px;
@@ -169,14 +169,14 @@ header {
     padding-top: 10px;
 }
 
-span{
+.span_primary{
     font-weight: bold;
 }
 
 .main_text{
     padding-top: 10px
 }
-#main_text {
+.text_content {
     font-size: 12px;
     padding-bottom: 10px;
     padding-top: 10px;
